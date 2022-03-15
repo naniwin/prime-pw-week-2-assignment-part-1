@@ -19,7 +19,7 @@ let adventurous = true;
 // 8 - Create a variable named `food`, and set its value to a string of your favorite food
 let food = 'pizza'
 // 9 - Create a variable called `pets` and set it to the value of the number of pets you have
-let pets = 5;
+let pets = 2;
 // 10 - Create a variable called `friendsPets` and assign it the value of the number of pets your friend has
 let friendsPets = 3;
 // 11 - Add two pets to your `pets` variable
@@ -42,13 +42,14 @@ if (luckyNumber === 2 && adventurous === true){
 // else{
 //     console.log('Do not roll the dice!');
 // }
+
 // 15 - Write a conditional that console logs "I can have more pets!" 
 //if the value of `pets` is less than the value of `allowedPets`,
 // console logs "I have enough pets" if the value of `pets` is equal to the value of `allowedPets`,
 // and console logs "Oh no, I have too many pets!"
 // if the value of `pets` is greater than the value of `allowedPets`.
 
-pets = 5; // reentered since question 9 was messing up my original variable value
+pets = 2; // reentered since question 9 was messing up my original variable value
 if(pets < allowedPets){
     console.log('I can have more pets!');
 }
@@ -65,6 +66,11 @@ else{
 // assigns the highest value to `mostPets`. There's several possibilities --
 // be sure to think through all the scenarios. 
 // console.log `mostPets` after the conditional has run.
+let mostPets;
+if( pets <= 5 && friendsPets === 3){
+    mostPets = 6;
+}
+console.log(mostPets);
 
 // 17 - Write a *switch* statement that logs:
 //      "First is the worst" if your lucky number is 1
@@ -73,6 +79,23 @@ else{
 //      Otherwise, log "Luck is what happens when preparation meets opportunity"
 //      You'll need to research how to use switch statements!
 
-// 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
+switch (luckyNumber){
+    case '1':
+        console.log('First is the worst.');
+        break;
+    case '2':
+        console.log('Second is the best.');
+        break;
+    case '3':
+        console.log('Third is the one with the polka dot dress.');
+        break;
+    default:
+        console.log('Luck is what happens when preparation meets opportunity.');
+        //expecting output since luckyNumber is 22
+}
 
+// 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
+let result =
+    (adventurous === true) ? 'Adventures are great!' : 'How about we stay home?';
+console.log(result)
 
